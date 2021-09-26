@@ -6,7 +6,7 @@ const styles = {
 	ul: {
 		listStyle: "none",
 		margin: 0,
-		paging: 0,
+		padding: 0,
 	},
 };
 

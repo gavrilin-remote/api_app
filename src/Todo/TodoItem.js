@@ -1,13 +1,14 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import Context from "../context";
+
 const styles = {
 	li: {
 		display: "flex",
 		justifyContent: "space-between",
-		alignItem: "center",
+		alignItems: "center",
 		padding: ".5rem 1rem",
-		border: "1px solid #ccc",
+		border: "1px solid #000",
 		borderRadius: "4px",
 		marginBottom: ".5rem",
 	},
@@ -20,7 +21,7 @@ function TodoItem({ todo, index, onChange }) {
 	const { removeTodo } = useContext(Context);
 
 	const classes = [];
-	if (todo.complited) {
+	if (todo.completed) {
 		classes.push("done");
 	}
 	return (
@@ -28,7 +29,7 @@ function TodoItem({ todo, index, onChange }) {
 			<span className={classes.join(" ")}>
 				<input
 					type="checkbox"
-					checked={todo.complited}
+					checked={todo.completed}
 					style={styles.input}
 					onChange={() => onChange(todo.id)}
 				/>
