@@ -14,7 +14,7 @@ const styles = {
 	},
 	input: {
 		marginRight: "1rem",
-		border: "1px solid #000",
+		border: "none",
 		marginLeft: "2.8rem",
 		background: "rgb(36, 33, 36)",
 		color: "rgb(191, 225, 232)",
