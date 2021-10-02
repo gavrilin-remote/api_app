@@ -6,11 +6,6 @@ import Loader from "./Loader";
 
 function App() {
 	const [todos, setTodos] = React.useState([]);
-	// 	{ id: 1, completed: false, title: "Купить хлеб" },
-	// 	{ id: 2, completed: true, title: "Помыть посуду" },
-	// 	{ id: 3, completed: false, title: "Заказать ноут" },
-	// 	{ id: 4, completed: false, title: "Привет" },
-	// ]);
 
 	const [loading, setLoading] = React.useState(true);
 
