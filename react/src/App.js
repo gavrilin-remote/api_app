@@ -10,7 +10,7 @@ function App() {
 	const [loading, setLoading] = React.useState(true);
 
 	useEffect(() => {
-		fetch("https://jsonplaceholder.typicode.com/todos?_limit=5")
+		fetch("http://localhost:3001/todo")
 			.then((response) => response.json())
 			.then((todos) => {
 				setTodos(todos);
