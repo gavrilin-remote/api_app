@@ -2,16 +2,6 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 const styles = {
-	form: {
-		display: "flex",
-		justifyContent: "space-between",
-		alignItems: "center",
-		padding: ".5rem 1rem",
-		border: "1px solid #000",
-		borderRadius: "4px",
-		marginBottom: ".5rem",
-		ShadowRoot: "0px 0px 23px 9px #000000",
-	},
 	input: {
 		marginRight: "1rem",
 		border: "none",
@@ -50,7 +40,7 @@ function AddTodo({ onCreate }) {
 	}
 
 	return (
-		<form style={styles.form} onSubmit={submitHandler}>
+		<form className="form" onSubmit={submitHandler}>
 			<input
 				{...input.bind}
 				placeholder="Type new todo..."

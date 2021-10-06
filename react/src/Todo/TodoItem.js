@@ -3,15 +3,6 @@ import PropTypes from "prop-types";
 import Context from "../context";
 
 const styles = {
-	li: {
-		display: "flex",
-		justifyContent: "space-between",
-		alignItems: "center",
-		padding: ".5rem 1rem",
-		border: "1px solid #000",
-		borderRadius: "4px",
-		marginBottom: ".5rem",
-	},
 	input: {
 		marginRight: "1rem",
 	},
@@ -21,11 +12,11 @@ function TodoItem({ todo, index, onChange }) {
 	const { removeTodo } = useContext(Context);
 
 	const classes = [];
-	if (todo.completed.parse("true")) {
+	if (todo.completed) {
 		classes.push("done");
 	}
 	return (
-		<li style={styles.li}>
+		<li className="form">
 			<span className={classes.join(" ")}>
 				<input
 					type="checkbox"

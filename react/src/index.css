@@ -13,7 +13,15 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
 }
-
+.form {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem 1rem;
+	border: 1px solid #000;
+	border-radius: 4px;
+	margin-bottom: 0.5rem;
+}
 .wrapper {
 	padding-top: 5rem;
 	margin: 0 auto;
