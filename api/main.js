@@ -24,12 +24,16 @@ const port = process.env.PORT || 3001;
 app.listen(port, () => console.log(`Listening on port ${port}..`));
 
 app.get("/todo", (req, res) => {
-	mysqlConnection.query("SELECT * FROM todo;", (err, rows, fields) => {
-		if (!err) {
-			console.log(rows);
-			res.send(rows);
-		} else console.log(err);
-	});
+	mysqlConnection.query(
+		//"SELECT * FROM todo;"
+		"SELECT	id, title, IF(completed, cast(TRUE as json), cast(FALSE as json)) completed FROM todo;",
+		(err, rows, fields) => {
+			if (!err) {
+				console.log(rows);
+				res.send(rows);
+			} else console.log(err);
+		}
+	);
 	// res.send('[{ "userId": 1, "id": 1, "title": "delectus aut autem", "completed": false }]');
 	// if(completed, cast(TRUE as json), cast(FALSE as json))
 });
